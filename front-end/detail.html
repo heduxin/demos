@@ -1,0 +1,332 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>小米有品-详情页</title>
+<!-- 禁止检查当前域名 -->
+<meta name="referrer" content="never">
+<!-- 网站图标 -->
+<link rel="shortcut icon" href="https://cn.account.xiaomi.com/favicon.ico" />
+<!-- 初始化css文件：用来将所有浏览器中显示不一样的样式，变的一样 -->
+<link rel="stylesheet" href="./css/normalize.css">
+<!-- 引入bootstrap -->
+<link rel="stylesheet" href="./css/bootstrap.css">
+<!-- 公共样式 -->
+<link rel="stylesheet" href="./css/common.css">
+<!-- 当前文件的css -->
+<link rel="stylesheet" href="./css/detail.css">
+<!-- 引入js的库 -->
+<script src="./js/jquery.min.js"></script>
+<!-- 引入bootstrap.js，bootstrap的js需要依赖一个js库 -->
+<script src="./js/bootstrap.js"></script>
+<!-- 引入cookie的js -->
+<script src="./js/cookie.js"></script>
+<script src="./js/layer/layer.js"></script>
+<script src="./js/ajax.js"></script>
+<!-- <script src="./js/common.js"></script> -->
+<!-- <script src="./js/buttons.js"></script> -->
+</head>
+<style>
+    .box{
+      display: flex;
+      flex-wrap: nowrap;
+ 
+    }
+    .span{
+      display: inline-block;
+      margin-right: 10px;
+      background: #ffffff;
+      color: #9F8052;
+      padding: 0 10px;
+      border: 1px solid #9F8052;
+    }
+    .span.active{
+      background: #9F8052;
+      color: #ffffff;
+    }
+</style>
+<body>
+<!-- 顶部 -->
+<div class="wrap navbar-default">
+    <div class="content">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand logo" href="index.html">
+                        <img src="./images/logo@2x.png" alt="">
+                    </a>
+                </div>
+            
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">首页 </a></li>
+                        <li><a href="list.html">每日秒杀</a></li>
+                        <li class="active"><a href="index.html">详情页<span class="sr-only">(current)</span></a></li>
+                        
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right login">
+                        <li><a href="login.html">登陆</a></li>
+                        <li><a href="register.html">注册</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-right">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="请输入关键词">
+                        </div>
+                        <button type="submit" class="btn btn-default">搜索</button>
+                    </form>
+                    
+                    <!-- 登陆注册 -->
+                    
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </div>
+</div>
+<!-- 面包屑 -->
+
+<!-- 详情 -->
+<div class="wrap detail">
+    <div class="content">
+        <div class="up clearfix">
+            <div class="enlarge fl">
+                <div class="middle">
+                    <img src="https://bkimg.cdn.bcebos.com/pic/dbb44aed2e738bd40840d13ca18b87d6277ff95e?x-bce-process=image/resize,m_lfit,w_268,limit_1" alt="">
+                    <div class="shade"></div>
+                    <div class="big">
+                        <img src="https://bkimg.cdn.bcebos.com/pic/dbb44aed2e738bd40840d13ca18b87d6277ff95e?x-bce-process=image/resize,m_lfit,w_268,limit_1" alt="">
+                    </div>
+                </div>
+                <div class="small clearfix">
+                    <a href="" class="leftBtn fl">&lt;</a>
+                    <!-- 左右点击滑动 -->
+                    <div class="wraper fl">
+                        <ul>
+                            <!-- <li class="active"><img src="https://bkimg.cdn.bcebos.com/pic/32fa828ba61ea8d32d119dfb910a304e251f581a?x-bce-process=image/watermark,image_d2F0ZXIvYmFpa2UxNTA=,g_7,xp_5,yp_5" alt=""></li>
+                            <li><img src="https://img.alicdn.com/imgextra/i4/26444719/O1CN01rm8rNy1kjLfh0RQMU_!!26444719.jpg" alt=""></li>
+                            <li><img src="https://img.alicdn.com/imgextra/i4/26444719/O1CN01JiaEn31kjLfhzzQ5q_!!26444719.jpg" alt=""></li> -->
+                        </ul>
+                    </div>
+                    
+                    <a href="" class="rightBtn fr">&gt;</a>
+                </div>
+            </div>
+            
+            <div class="description fl">
+                <h4>标题</h4>
+                <p class="free" style="font-size: 12px; color: #808080;">免息</p>
+                <p class="oshop">优惠券:<button class="shop-parper">领券</button>20元有品618满199减20优惠券</p>
+                <div class="price">
+                    <p class="souceprice">售价：￥<span style="font-size: 24px; color: red;">000</span></p>
+                    <p class="coupon">服务：<span><img src="./images/ture.png" alt="">包邮&emsp13;<img src="./images/ture.png" alt="">七天无理由&emsp13;<img src="./images/ture.png" alt="">小米有品推荐</span></p>
+                </div>
+                <div class="delivery">
+                    <!-- 配送：
+                    <select name="provinces"></select>
+                    <select name="citys"></select>
+                    <select name="areas"></select> -->
+                    <p class="select-s">套餐：
+                        <!-- <button onclick="">套餐一</button>
+                        <button>套餐二</button>
+                        <button>套餐三</button> -->
+                        <div class="page" style="margin-left: 15px;">
+                            <div class="row">
+                              <p class="tittle"></p>
+                              <div class="box">
+                                <div class="span"></div>
+                              </div>
+                            </div>
+                        </div>
+                    </p>
+                </div>
+                <div class="addCart clearfix">
+                    <div class="number fl">
+                        <input type="text" name="num" value=1>
+                        <button class="add">+</button>
+                        <button class="reduce">-</button>
+                    </div>
+                    <button class="fl addBtn" style="margin-left: -60px;" id="anniu">加入购物车</button>
+                    <a href="cart.html" class="fl btn toCart">进入购物车</a>
+                </div>
+                <div class="share">
+                    <button>收藏<img src="./images/like-b.png" alt="" style="width: 20px;"></button>
+                    <button>客服<img src="./images/pepor-b.png" alt="" style="width: 20px;"></button>
+                </div>
+            </div>
+            <!-- <div class="guess fr">
+                <h4>限时抢购</h4>
+                <ul>
+                    <li>
+                        <img  src="https://img.youpin.mi-img.com/shopmain/77b057973aa8622343619ba0f1a0b566.jpg@base@tag=imgScale&F=webp&h=1080&w=1080?w=1080&h=1080" alt="">
+                        <p></p>
+                        <span>￥99</span>
+                    </li>
+                    <li>
+                        <img  src="https://img.youpin.mi-img.com/shopmain/77b057973aa8622343619ba0f1a0b566.jpg@base@tag=imgScale&F=webp&h=1080&w=1080?w=1080&h=1080" alt="">
+                        <p></p>
+                        <span>￥99</span>
+                    </li>
+                </ul>
+                <a href="" class="prev">上</a>
+                <a href="" class="next">下</a>
+            </div> -->
+        </div>
+    </div>
+</div>
+<!-- 推荐爆款 -->
+<div class="wrap recommend">
+    <div class="content">
+        <h4>推荐爆款</h4>
+        <ul class="clearfix">
+            <li>
+                <img src="https://img.youpin.mi-img.com/shopmain/77b057973aa8622343619ba0f1a0b566.jpg@base@tag=imgScale&F=webp&h=1080&w=1080?w=1080&h=1080" alt="">
+                <br>
+                <span>￥99</span>
+            </li>
+            <li>
+                <img src="https://img.youpin.mi-img.com/shopmain/77b057973aa8622343619ba0f1a0b566.jpg@base@tag=imgScale&F=webp&h=1080&w=1080?w=1080&h=1080" alt="">
+                <br>
+                <span>￥99</span>
+            </li>
+            <li>
+                <img src="https://img.youpin.mi-img.com/shopmain/77b057973aa8622343619ba0f1a0b566.jpg@base@tag=imgScale&F=webp&h=1080&w=1080?w=1080&h=1080" alt="">
+                <br>
+                <span>￥99</span>
+            </li>
+            <li>
+                <img src="https://img.youpin.mi-img.com/shopmain/77b057973aa8622343619ba0f1a0b566.jpg@base@tag=imgScale&F=webp&h=1080&w=1080?w=1080&h=1080" alt="">
+                <br>
+                <span>￥99</span>
+            </li>
+            <li>
+                <img src="https://img.youpin.mi-img.com/shopmain/77b057973aa8622343619ba0f1a0b566.jpg@base@tag=imgScale&F=webp&h=1080&w=1080?w=1080&h=1080" alt="">
+                <br>
+                <span>￥99</span>
+            </li>
+            <li>
+                <img src="https://img.youpin.mi-img.com/shopmain/77b057973aa8622343619ba0f1a0b566.jpg@base@tag=imgScale&F=webp&h=1080&w=1080?w=1080&h=1080" alt="">
+                <br>
+                <span>￥99</span>
+            </li>
+            <li>
+                <img src="https://img.youpin.mi-img.com/shopmain/77b057973aa8622343619ba0f1a0b566.jpg@base@tag=imgScale&F=webp&h=1080&w=1080?w=1080&h=1080" alt="">
+                <br>
+                <span>￥99</span>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="wrap details">
+    <div class="content clearfix">
+        <!-- <div class="details-left fl">
+            <h4>浏览历史</h4>
+            <ul>
+                <li>
+                    <img width="180" src="https://img.youpin.mi-img.com/shopmain/77b057973aa8622343619ba0f1a0b566.jpg@base@tag=imgScale&F=webp&h=1080&w=1080?w=1080&h=1080" alt="">
+                    <p>描述</p>
+                    <span>200</span>
+                </li>
+                <li>
+                    <img width="180" src="https://img.youpin.mi-img.com/shopmain/77b057973aa8622343619ba0f1a0b566.jpg@base@tag=imgScale&F=webp&h=1080&w=1080?w=1080&h=1080" alt="">
+                    <p>描述</p>
+                    <span>200</span>
+                </li>
+                <li>
+                    <img width="180" src="https://img.youpin.mi-img.com/shopmain/77b057973aa8622343619ba0f1a0b566.jpg@base@tag=imgScale&F=webp&h=1080&w=1080?w=1080&h=1080" alt="">
+                    <p>描述</p>
+                    <span>200</span>
+                </li>
+            </ul>
+        </div> -->
+
+
+        
+        <!-- <div class="details-right fr">
+            <div class="tab">
+                <ul>
+                    <li class="active">商品介绍</li>
+                    <li>售后服务</li>
+                    <li>商品评价</li>
+                </ul>
+                <ol>
+                    <li class="active">111</li>
+                    <li>222</li>
+                    <li>333</li>
+                </ol>
+            </div>
+        </div> -->
+    </div>
+</div>
+<!-- 底部 -->
+<footer>
+
+</footer>
+</body>
+<script src="./js/enlarge.js"></script>
+<script src="./js/detail.js"></script>
+<!-- <script src="./js/tab.js"></script> -->
+<script type="text/javascript">
+
+</script>
+</html>
+<script>
+    var attr=[];
+    var json=[{title:'商品尺寸',parmas:[20,40,60]},{title:'商品颜色',parmas:['白色','黑色','红色']},{title:'商品套餐',parmas:['套餐一','套餐二','套餐三']}]
+    var html='';
+    for(let i=0;i<json.length;i++){
+      var childhtml='';
+      for(let j=0;j<json[i].parmas.length;j++){
+        childhtml+='<div class="span "  data-row='+i+'>'+json[i].parmas[j]+'</div>'
+      }
+      html+='<div class="row"><p class="tittle">'+json[i].title+'</p> <div class="box">'+childhtml+'</div></div></div>'
+    }
+   
+    $('.page').html(html);
+   
+   
+    $(' .page').on('click', '.span', function (event) {
+      var value=$(this).text();
+      var row=event.currentTarget.dataset.row;   //第几行
+      //先判断值是否存在 存在设为空
+      // console.log(attr.indexOf(value))
+      if(attr.indexOf(value)>-1){
+        attr[row]='';
+        $(this).removeClass('active')
+      }else{
+        attr[row]=value;
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active')
+      }
+      
+      console.log(attr)
+    });
+   
+    $('#anniu').click(function(){
+      if(attr.length!=3){
+        layer.confirm('请把套餐填写完整！', {
+            btn: ['确定']
+        });
+          return;
+      }   
+   
+      for(let i=0;i<attr.length;i++){  
+        if(attr[i]==''||attr[i]==undefined||attr.length!=3){     
+            layer.confirm('请把套餐填写完整！', {
+            btn: ['确定']
+        });
+          return;
+        }
+      }
+      console.log('这是最终提交的值'+attr.join(','))
+   
+    })
+   
+   
+  </script>

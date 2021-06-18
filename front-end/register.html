@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>小米账号-注册</title>
+<!-- 网站图标 -->
+<link rel="shortcut icon" href="https://cn.account.xiaomi.com/favicon.ico" />
+<!-- 初始化css文件：用来将所有浏览器中显示不一样的样式，变的一样 -->
+<link rel="stylesheet" href="./css/normalize.css">
+<!-- 引入bootstrap -->
+<link rel="stylesheet" href="./css/bootstrap.css">
+<!-- 公共样式 -->
+<link rel="stylesheet" href="./css/common.css">
+<!-- 当前文件的css -->
+<link rel="stylesheet" href="./css/register.css">
+<!-- 引入css样式文件 -->
+<link rel="stylesheet" href="./css/oregister.css">
+<!-- 引入js的库 -->
+<script src="./js/jquery.min.js"></script>
+<!-- 引入bootstrap.js，bootstrap的js需要依赖一个js库 -->
+<script src="./js/bootstrap.js"></script>
+<!-- 引入ajax文件 -->
+<script src="./js/ajax.js"></script>
+<!-- 引入layer -->
+<script src="./js/layer/layer.js"></script>
+</head>
+<body>
+<!-- 注册表单 -->
+<div class="wrap">
+    <div class="content">
+        <div class="bgcolor">
+        <h1 class="text-center"><img src="./images/milogos.png" alt=""><br><h4>注册小米账号</h4></h1>
+        <form class="form-horizontal register">
+            <div class="form-group" style="padding-left: 275px;">
+                <div>
+                    <label for="inputEmail3" class="col-sm-2 control-label">小米账号</label>
+                    <div class="col-sm-10">
+                    <input type="text" name="usernam" class="form-control" placeholder="请输入您要注册的小米账号">
+                </div>
+                </div>
+            </div>
+            <div class="form-group" style="padding-left: 275px;">
+                <label for="inputPassword3" class="col-sm-2 control-label">用户密码</label>
+                <div class="col-sm-10">
+                <input type="password" class="form-control" name="password" placeholder="请输入您的密码">
+                </div>
+            </div>
+            <div class="form-group" style="padding-left: 275px;">
+                <label for="inputPassword3" class="col-sm-2 control-label">确认密码</label>
+                <div class="col-sm-10">
+                <input type="password" class="form-control" name="repass" placeholder="确认密码">
+                </div>
+            </div>
+            <div class="form-group" style="padding-left: 275px;">
+                <label for="inputPassword3" class="col-sm-2 control-label">邮箱</label>
+                <div class="col-sm-10">
+                <input type="text" class="form-control" name="email" placeholder="邮箱">
+                </div>
+            </div>
+            <div class="form-group" style="padding-left: 275px;">
+                <label for="inputPassword3" class="col-sm-2 control-label">手机号码</label>
+                <div class="col-sm-10">
+                <input type="text" class="form-control" name="tel" placeholder="请输入您的手机号码">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="osos">
+                <div class="checkbox">
+                    <label>
+                    <input type="checkbox" name="agree"> 已阅读并同意:小米<a href="https://static.account.xiaomi.com/html/agreement/user/zh_CN.html">用户协议</a>和<a href="https://privacy.mi.com/miaccount/zh_CN/">隐私政策</a>
+                    </label>
+                </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="osos">
+                <button type="button" class="btn btn-default submit" id="obtn">立即注册</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>
+</div>
+<footer>
+    <p class="ft-first">
+        <a href="#">简体</a>|
+        <a href="#">繁体</a>|
+        <a href="#">English</a>|
+        <a href="#">常见问题</a>|
+        <a href="#">隐私政策</a>
+    </p>
+    <p class="ft-second">小米公司版权所有-京ICP备10046444-
+        <img src="https://account.xiaomi.com/static/res/9204d06/account-static/respassport/acc-2014/img/ghs.png">
+        京公网安备11010802020134号-京ICP证110507号
+    </p>
+</footer>
+</body>
+<script src="./js/register.js"></script>
+</html>

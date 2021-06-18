@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+
+
+  <script>
+    /*
+      localStorage
+        - 也是浏览器提供的一个存储空间
+
+      和 cookie 的区别
+        - cookie 前后台来回跑，localStorage 只存储再浏览器不会来回跑
+        - cookie 前后台都可以设置， localStorage 只能由前台操作
+        - cookie 存储的是字符串，localStorage 只能存储 json 格式的字符串或者普通字符串
+        - cookie 存储 4KB 左右，localStorage 20M 左右
+        - cookie 自己封装 API 去操作，localStorage 由自己的 API 直接操作
+        - cookie 默认会话级别时效性，localStorage 默认永久时效（除非手动删除）
+
+      和 cookie 一样的地方
+        - cookie 按照域名存储，localStorage 也是
+
+
+      操作 localStorage
+      1. localStorage.setItem('你要设置的 key', '你要设置的 value')
+      2. localStorage.getItem('你要获取的 key')
+      3. locqlStorage.removeItem('你要删除的 key')
+      4. localStorage.clear() 清空
+    */
+
+    // localStorage.setItem('name', 'Jack')
+    // localStorage.setItem('name', 'Rose')
+    // localStorage.setItem('age', '18')
+    // localStorage.setItem('gender', '男')
+    // console.log(localStorage.getItem('name'))
+    // localStorage.removeItem('name')
+
+    // localStorage.clear()
+
+
+  </script>
+</body>
+</html>

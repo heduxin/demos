@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>小米有品-购物车</title>
+<!-- 禁止检查当前域名 -->
+<meta name="referrer" content="never">
+<!-- 网站图标 -->
+<link rel="shortcut icon" href="https://cn.account.xiaomi.com/favicon.ico" />
+<!-- 初始化css文件：用来将所有浏览器中显示不一样的样式，变的一样 -->
+<link rel="stylesheet" href="./css/normalize.css">
+<!-- 引入bootstrap -->
+<link rel="stylesheet" href="./css/bootstrap.css">
+<!-- 公共样式 -->
+<link rel="stylesheet" href="./css/common.css">
+<!-- 当前文件的css -->
+<link rel="stylesheet" href="./css/cart.css">
+<!-- 引入js的库 -->
+<script src="./js/jquery.min.js"></script>
+<!-- 引入bootstrap.js，bootstrap的js需要依赖一个js库 -->
+<script src="./js/bootstrap.js"></script>
+<!-- 引入cookie的js -->
+<script src="./js/cookie.js"></script>
+<script src="./js/layer/layer.js"></script>
+<script src="./js/ajax.js"></script>
+<script src="./js/cart.js"></script>
+</head>
+<body>
+<!-- 顶部 -->
+<div class="wrap navbar-default">
+    <div class="content">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand logo" href="index.html">
+                        <img src="./images/logo@2x.png" alt="">
+                    </a>
+                </div>
+            
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">首页 </a></li>
+                        <li><a href="list.html">每日秒杀</a></li>
+                        <li><a href="detail.html?id=1">详情页</a></li>
+                        <li class="active"><a href="index.html">购物车<span class="sr-only">(current)</span></a></li>
+                        
+                    </ul>
+                    <!-- 登陆注册 -->
+                    <ul class="nav navbar-nav navbar-right login">
+                        <li><a href="login.html">登陆</a></li>
+                        <li><a href="register.html">注册</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-right">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="请输入关键词">
+                        </div>
+                        <button type="submit" class="btn btn-default">搜索</button>
+                    </form>
+                    
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </div>
+</div>
+<!-- 面包屑 -->
+<div class="wrap">
+    <div class="content">
+        <ol class="breadcrumb">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="list.html">每日秒杀</a></li>
+            <li><a href="javascript:history.back();">详情页</a></li>
+            <li class="active">购物车页</li>
+        </ol>
+    </div>
+</div>
+<!-- 购物车列表 -->
+<div class="wrap cart">
+    <div class="content">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" name="selectAll">全选</th>
+                    <th>商品预览</th>
+                    <th>商品信息</th>
+                    <th>商品价格</th>
+                    <th>商品数量</th>
+                    <th>金额</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot>
+                <tr>
+                    <td><input type="checkbox" name="selectAll"></td>
+                    <td colspan="2">已选：<span class="totalNum"> 0 </span> 件</td>
+                    <td colspan="2">合计：<span class="totalPrice">0</span></td>
+                    <td><a class="btn btn-primary" href="list.html">返回首页</a></td>
+                    <td><a class="btn btn-warning" href="order.html">去结算</a></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+<!-- 底部 -->
+<footer>
+    
+</footer>
+</body>
+<script type="text/javascript">
+
+
+</script>
+</html>

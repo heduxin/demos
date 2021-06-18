@@ -1,0 +1,173 @@
+h4{
+    font-size: 30px;
+    text-align: center;
+}
+.text-center{
+    margin: 30px 0 40px;
+}
+.checkbox a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+}
+.checkbox{
+    text-align: center;
+}
+#obtn{
+    width: 328px;
+    height: 40px;
+    background-color: #FF6700;
+    color: #fff;
+}
+.osos{
+    text-align: center;
+}
+.form-control{
+    width: 328px;
+    height: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+    background: #F5F5F5;
+}
+.bigbox{
+    width: 854px;
+    height: 560px;
+    background: #fff;
+    margin: 0 auto;
+    margin-top: 40px;
+    text-align: center;
+    position: relative;
+}
+.conture{
+    width: 358px;
+    margin: 0 auto;
+    text-align: left;
+}
+.ercode {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.ercode {
+    background: url(https://account.xiaomi.com/static/res/fa9e760/account-static/respassport/acc-2014/img/icon_ercode.png) no-repeat;
+    width: 80px;
+    height: 80px;
+}
+
+.tit-text{
+    font-size: 30px;
+    font-weight: normal;
+}
+.milogo{
+    margin: 30px 0 40px;
+}
+input{
+    font-size: 16px;
+    outline: none;
+}
+span{
+    color: rgba(255,0,0,0);
+}
+.number{
+    width: 326px;
+    height: 22px;
+    padding: 13px 16px 13px 14px;
+}
+.password{
+    width: 326px;
+    height: 22px;
+    padding: 13px 16px 13px 14px;
+    margin-bottom: 30px;
+}
+.btn{
+    width: 326px;
+    height: 22px;
+    padding: 13px 16px 13px 14px;
+    background: #FF6700;
+    border-color: #FF6700;
+    color: #fff;
+    text-align: center;
+    border: none;
+}
+.sign-register{
+    font-size: 14px;
+    margin-top: 14px;
+}
+.sign-register a{
+    color: #FF6700;
+}
+.forget{
+    color: #9D9D9D;
+    margin-top: 30px;
+}
+.forget a{
+    color: #757575;
+}
+.eles-sign{
+    margin-top: 50px;
+    border-top: 1px solid #e0e0e0;
+    width: 358px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+fieldset, img {
+    border: 0;
+}
+.eles-text{
+    color: #B0B0B0;
+}
+.eles-sign a{
+    color: #B0B0B0;
+}
+.Other-login{
+    width: 358px;
+    height: 30px;
+    margin: 0 auto;
+}
+.Other-login img{
+    width: 30px;
+    float: left;
+    margin: 0 12px;
+}
+.img-logo{
+    width: 216px;
+    margin: 0 auto;
+    margin-top: 24px;
+}
+footer{
+    text-align: center;
+    margin-top: 40px;
+    color: #757575;
+}
+.ft-first a{
+    color: #757575;
+    margin: 0 10px;
+}
+.ft-first a:nth-child(1){
+    color: #000;
+}
+.ft-second{
+    height: 25px;
+    padding: 15px;
+}

@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>小米账号-登录</title>
+<!-- 网站图标 -->
+<link rel="shortcut icon" href="https://cn.account.xiaomi.com/favicon.ico" />
+<!-- 初始化css文件：用来将所有浏览器中显示不一样的样式，变的一样 -->
+<link rel="stylesheet" href="./css/normalize.css">
+<!-- 引入bootstrap -->
+<link rel="stylesheet" href="./css/bootstrap.css">
+<!-- 公共样式 -->
+<link rel="stylesheet" href="./css/common.css">
+<!-- 当前文件的css -->
+<link rel="stylesheet" href="./css/login.css">
+<!-- 引入css样式文件 -->
+<link rel="stylesheet" href="./css/oregister.css">
+<!-- 引入js的库 -->
+<script src="./js/jquery.min.js"></script>
+<!-- 引入bootstrap.js，bootstrap的js需要依赖一个js库 -->
+<script src="./js/bootstrap.js"></script>
+<!-- 引入ajax和cookie文件 -->
+<script src="./js/ajax.js"></script>
+<script src="./js/cookie.js"></script>
+<!-- 引入表单校验插件 -->
+<script src="./js/validate/jquery.validate.min.js"></script>
+<script src="./js/validate/localization/messages_zh.min.js"></script>
+<!-- 引入弹出层插件 -->
+<script src="./js/layer/layer.js"></script>
+</head>
+<body>
+<!-- 注册表单 -->
+<div class="wrap">
+    <div class="content">
+        <h1 class="text-center"><img src="./images/milogos.png" alt=""><br><h4>小米账号登录</h4></h1>
+        <form class="form-horizontal register loginForm">
+            <div class="form-group" style="padding-left: 244px;">
+                <label for="inputEmail3" class="col-sm-2 control-label"></label>
+                <div class="col-sm-10">
+                <input type="text" name="username" class="form-control" placeholder="邮箱/手机号码/小米ID">
+                </div>
+            </div>
+            <div class="form-group" style="padding-left: 244px;">
+                <label for="inputPassword3" class="col-sm-2 control-label"></label>
+                <div class="col-sm-10">
+                <input type="password" class="form-control" name="password" placeholder="密码">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <div class="osos">
+                <button type="submit" class="btn btn-default submit" id="obtn">登录</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="noforget">
+                <div class="checkbox">
+                    <label>
+                    <input type="checkbox" name="remember"> 记住账户密码
+                    </label>
+                </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- 底部 -->
+<footer>
+    <p class="sign-register"><a href="">手机短信登录/注册</a></p>
+    <p class="forget"><a href="./register.html">立即注册</a>│<a href="#">忘记密码</a></p>
+    <fieldset class="eles-sign">
+        <legend class="eles-text">其他方式登录</legend>
+    </fieldset>
+    <div class="Other-login">
+        <div class="img-logo">
+        <a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&response_type=code&client_id=100284651&redirect_uri=https://account.xiaomi.com/pass/sns/login/load&state=STATE_420739"><img src="./images/qq.png" alt="QQ"></a>
+        <a href="https://weibo.com/login.php"><img src="./images/weibo.png" alt="微博"></a>
+        <a href="https://auth.alipay.com/login/express.htm?goto=https%3A%2F%2Fmemberexprod.alipay.com%3A443%2Fauthorize%2FuserAuthQuickLoginAction.htm%3Fe_i_i_d%3D0f57537600ffff0f3b5c2a16b0c688f9"><img src="./images/zhifubao.png" alt="支付宝"></a>
+        <a href="https://open.weixin.qq.com/connect/qrconnect?appid=wxa21de3acc0d5e79b&redirect_uri=https%3A%2F%2Fsns.account.xiaomi.com%2Fpass%2Fsns%2Flogin%2Fload&response_type=code&scope=snsapi_login&state=STATE_401325#wechat_redirect"><img src="./images/weixin.png" alt="微信"></a>
+        </div>
+    </div>
+</footer>
+</body>
+<script src="./js/login.js"></script>
+</html>
